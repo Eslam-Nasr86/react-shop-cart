@@ -1,9 +1,10 @@
+import Header from "./components/Header/Header";
 
 
 function App() {
   return (
     <div className="layout">
-        <header>Shopping Cart</header>
+        <Header/>
         <main>Content</main>
         <footer>Footer</footer>
 
