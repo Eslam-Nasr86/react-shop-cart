@@ -1,0 +1,37 @@
+[
+    {
+        "id": "id1",
+        "title": "product 1",
+        "imageUrl": "/images/lap1.jpeg",
+        "desc": "this is product 1",
+        "price": 300,
+        "size": ["S", "M"]
+    },
+    
+    {
+        "id": "id",
+        "title": "product 2",
+        "imageUrl": "/images/lap2.jpeg",
+        "desc": "this is product 2",
+        "price": 400,
+        "size": ["M"]
+    },
+
+    {
+        "id": "id3",
+        "title": "product 3",
+        "imageUrl": "/images/lap3.jpeg",
+        "desc": "this is product 3",
+        "price": 600,
+        "size": ["S"]
+    },
+
+    {
+        "id": "id4",
+        "title": "product 4",
+        "imageUrl": "/images/lap4.jpeg",
+        "desc": "this is product 4",
+        "price": 700,
+        "size": ["S", "M", "L"]
+    }
+]
