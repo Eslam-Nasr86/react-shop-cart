@@ -1,0 +1,17 @@
+import React from 'react'
+import Modal from 'react-modal'
+
+export default function ProductModal({product, closeModal}) {
+  return (
+  
+    <Modal isOpen={product} onRequestClose={closeModal}>
+    <span className='close-icon' onClick={closeModal}>&times;</span>
+    <div className='product-info'>
+      <img src={product.imageUrl} alt={product.title}/>
+      <p>{product.title}</p>
+      <p>{product.desc}</p>
+      <p>$ {product.price}</p>
+    </div>
+  </Modal>
+  )
+}
