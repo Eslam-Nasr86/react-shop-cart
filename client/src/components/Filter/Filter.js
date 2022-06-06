@@ -1,12 +1,12 @@
 import React from 'react'
 import '../../css/Filter/Filter.css'
 
-export default function Filter({handleFilterBySize, size, handleFilterBySort, sort}) {
+export default function Filter({handleFilterBySize, size, handleFilterBySort, sort, products}) {
   return (
     <div className="filter-wrapper">
 
     <h2 className='filter-title'>Filter</h2>
-    <div className='num-of-products'>Number of products 4</div>
+    <div className='num-of-products'>Number of products {products.length}</div>
     <div className='filter-by-size'>
     <span>Filter</span>
         <select className='filter-select' onChange={handleFilterBySize} value={size}>
