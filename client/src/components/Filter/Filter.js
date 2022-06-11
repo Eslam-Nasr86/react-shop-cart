@@ -1,8 +1,10 @@
 import React from 'react'
+import { Fade, Flip } from 'react-awesome-reveal'
 import '../../css/Filter/Filter.css'
 
 export default function Filter({handleFilterBySize, size, handleFilterBySort, sort, products}) {
   return (
+  
     <div className="filter-wrapper">
 
     <h2 className='filter-title'>Filter</h2>
@@ -33,5 +35,6 @@ export default function Filter({handleFilterBySize, size, handleFilterBySort, so
     </div>
 
     </div>
+ 
   )
 }

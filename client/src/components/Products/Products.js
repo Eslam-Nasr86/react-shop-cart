@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "../../css/Products/Products.css"
-
+import { Bounce, Slide } from "react-awesome-reveal";
 import ProductModal from './ProductModal'
 
 export default function Products({products,addToCart}) {
@@ -14,10 +14,11 @@ export default function Products({products,addToCart}) {
   }
 
   return (
-<div className="products-wrapper">
-            {products.map((product) => (
-                <div className='products-item' key={product.id}>
-                        
+        
+      <div className="products-wrapper">
+                  {products.map((product) => (
+                      <div className='products-item' key={product.id}>
+                              
                            <a href='#' onClick={()=>openModal(product)}> <img src={product.imageUrl} alt={product.title}/></a>
                             <div className='product-desc'>
                                 <p>{product.title}</p> 
@@ -37,5 +38,6 @@ export default function Products({products,addToCart}) {
               <ProductModal product={product} closeModal={closeModal} />
 
         </div>
+      
   )
 }
