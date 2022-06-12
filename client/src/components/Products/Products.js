@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../../css/Products/Products.css"
 import { Bounce, Slide } from "react-awesome-reveal";
 import ProductModal from './ProductModal'
+import {connect} from 'react-redux'
+import { fetchProducts } from '../../store/actions/products';
 
-export default function Products({products,addToCart}) {
+function Products({products,addToCart}) {
   const [product, setProduct] = useState("")
 
   const openModal = (product)=>{
@@ -13,10 +15,14 @@ export default function Products({products,addToCart}) {
     setProduct(false)
   }
 
+
+
+  useEffect(()=>{fetchProducts()},[])
+
   return (
         
       <div className="products-wrapper">
-                  {products.map((product) => (
+                  {products && products.length? products.map((product) => (
                       <div className='products-item' key={product.id}>
                               
                            <a href='#' onClick={()=>openModal(product)}> <img src={product.imageUrl} alt={product.title}/></a>
@@ -32,7 +38,7 @@ export default function Products({products,addToCart}) {
 
 
                 </div>
-            ))}
+            )): "Loading"}
 
 
               <ProductModal product={product} closeModal={closeModal} />
@@ -41,3 +47,4 @@ export default function Products({products,addToCart}) {
       
   )
 }
+export default connect((state)=>{return {products:state.products.products}},fetchProducts)(Products)
